@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎬 Movie Search App</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+      /* Simple Decorative Enhancements */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #1c1c1c;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffcc00;
+      }
+
+      .search {
+        padding: 0.6rem 1rem;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        width: 250px;
+        transition: all 0.3s ease;
+      }
+
+      .search:focus {
+        box-shadow: 0 0 10px #ffcc00;
+      }
+
+      #main {
+        flex: 1;
+        padding: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      #recommendations-header {
+        font-size: 1.5rem;
+        margin: 1rem auto;
+        color: #ffcc00;
+      }
+
+      #recommendations {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .footer {
+        background-color: #111;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+
+      .footer h4 {
+        margin: 0;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3 class="logo">🎬 Movie Search App</h3>
+      <form id="form">
+        <input type="text" placeholder="Search for movies..." id="search" class="search" />
+      </form>
+    </header>
+
+    <main id="main"></main>
+
+    <h1 hidden id="recommendations-header">🎥 Recommendations Based on Search</h1>
+    <div id="recommendations"></div>
+
+    <div class="footer">
+      <h4>Designed & Developed by Mithilesh</h4>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
+
