@@ -1,2 +1,2 @@
 # Project-2
-Gym Website
+Movie Search Website
